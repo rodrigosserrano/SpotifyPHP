@@ -4,7 +4,7 @@ if (!isset($_SESSION['id'])) {
   session_destroy();
   header("Location: index.php"); exit;
 }
-if(isset($_GET['opc'])) {
+if(!empty($_GET['opc'])) {
   $opc = $_GET['opc'];
 }else{
   $opc = "H";
